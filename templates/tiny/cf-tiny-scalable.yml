@@ -148,7 +148,7 @@ meta:
 jobs:
   - name: backbone_z1
     instances: (( meta.instances.backbone_z1 ))
-    persistent_disk: 102400
+    persistent_disk: 25600
     templates: (( meta.backbone_templates ))
     resource_pool: (( meta.job_pools.backbone "_z1" ))
     update:
@@ -170,7 +170,7 @@ jobs:
             lan: []
   - name: backbone_z2
     instances: (( meta.instances.backbone_z2 ))
-    persistent_disk: 102400
+    persistent_disk: 25600
     templates: (( meta.backbone_templates ))
     resource_pool: (( meta.job_pools.backbone "_z2" ))
     update:
@@ -225,7 +225,7 @@ jobs:
   - name: data
     instances: 1
     resource_pool: (( meta.job_pools.data "_z1" ))
-    persistent_disk: 102400
+    persistent_disk: 25600
     templates: (( meta.data_templates ))
     networks:
       - name: cf1
@@ -283,7 +283,7 @@ jobs:
     instances: (( meta.instances.services_z1 ))
     resource_pool: (( meta.job_pools.services "_z1" ))
     templates: (( meta.services_templates ))
-    persistent_disk: 102400
+    persistent_disk: 25600
     update:
       serial: true
     networks:
@@ -302,7 +302,7 @@ jobs:
     instances: (( meta.instances.services_z2 ))
     resource_pool: (( meta.job_pools.services "_z2" ))
     templates: (( meta.services_templates ))
-    persistent_disk: 102400
+    persistent_disk: 25600
     update:
       serial: true
     networks:

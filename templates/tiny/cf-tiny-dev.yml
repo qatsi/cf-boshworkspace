@@ -111,7 +111,7 @@ meta:
 jobs:
   - name: data
     instances: (( meta.instances.data ))
-    persistent_disk: 102400
+    persistent_disk: 25600
     templates: (( meta.data_templates ))
     resource_pool: large_z1
     networks:
@@ -166,7 +166,7 @@ jobs:
   - name: services
     instances: (( meta.instances.services ))
     templates: (( meta.services_templates ))
-    persistent_disk: 102400
+    persistent_disk: 25600
     resource_pool: medium_z1
     networks:
       - name: cf1
